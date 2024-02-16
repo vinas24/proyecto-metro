@@ -26,4 +26,64 @@ public class Linea {
 	@JoinColumn(name = "tipo_linea")
 	private TipoLinea tipo;
 	
+	public Linea() {
+		super();
+	}
+
+	public Linea(long id, String color, double longitud, int numParadas, TipoLinea tipo) {
+		super();
+		this.id = id;
+		this.color = color;
+		this.longitud = longitud;
+		this.numParadas = numParadas;
+		this.tipo = tipo;
+	}
+
+	public long getId() {
+		return id;
+	}
+
+	public void setId(long id) {
+		this.id = id;
+	}
+
+	public String getColor() {
+		return color;
+	}
+
+	public void setColor(String color) {
+		this.color = color;
+	}
+
+	public double getLongitud() {
+		return longitud;
+	}
+
+	public void setLongitud(double longitud) {
+		this.longitud = longitud;
+	}
+
+	public int getNumParadas() {
+		return numParadas;
+	}
+
+	public void setNumParadas(int numParadas) {
+		this.numParadas = numParadas;
+	}
+
+	public TipoLinea getTipo() {
+		return tipo;
+	}
+
+	public void setTipo(TipoLinea tipo) {
+		this.tipo = tipo;
+	}
+
+	@Override
+	public String toString() {
+		return "Linea [id=" + id + ", color=" + color + ", longitud=" + longitud + ", numParadas=" + numParadas
+				+ ", tipo=" + tipo + "]";
+	}
+	
+	
 }
